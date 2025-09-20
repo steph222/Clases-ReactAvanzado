@@ -11,6 +11,9 @@ import Usuario from "./paginas/Usuario";
 
 import Leccion from "./paginas/Leccion";
 
+import EjemploContextApi from "./paginas/EjemploContextApi";
+import EjemploContextApi2 from "./paginas/EjemploContextApi2";
+
 function App() {
   return (
     <Router>
@@ -29,6 +32,10 @@ function App() {
         
         <Link to="/curso/react/leccion/1">Curso de React</Link> |{" "}
         <Link to="/curso/python/leccion/5">Curso de Python</Link> |{" "}
+
+
+        <Link to="/contextApi">Ejemplo 1</Link> |{" "}
+        <Link to="/contextApi2">Ejemplo 2</Link> |{" "}
 
 
       </nav>
@@ -51,6 +58,10 @@ function App() {
         <Route path="/usuario/:id" element={<Usuario/>} />
         
         <Route path="/curso/:cursoID/leccion/:leccionID" element={<Leccion/>} />
+
+        {/*Clase 2 */}
+        <Route path="/contextApi" element={<EjemploContextApi/>} />
+        <Route path="/contextApi2" element={<EjemploContextApi2/>}/>
 
       </Routes>
 
